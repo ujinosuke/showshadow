@@ -28,11 +28,12 @@ namespace Shoshado
             Hide();
         }
 
-        #region Delegates
 
-        public Action<int, int> EventCanvasMouseMove;
-
-        #endregion
+        public void DebugMouseMove(int x, int y)
+        {
+            string txt = string.Format("(x,y) = ({0},{1})", x, y);
+            txtMouse.Text = txt;
+        }
 
     }
 }

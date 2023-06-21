@@ -17,8 +17,12 @@ namespace Shoshado
 
         private GUICanvas Canvas;
         private ScrollPanel CanvasPanel = new ScrollPanel();
+        private DebugView DebugView = new DebugView();
 
         public Action<int /*x*/, int /*y*/, int /*w*/, int /*h*/> EventWindowChange;
+
+        private string _filepath = "";
+        private bool _modified = false;
 
         #endregion
 
@@ -30,6 +34,24 @@ namespace Shoshado
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SetTitle(false);
+
+            DebugView.Activate();
+#if DEBUG
+            DebugView.Show();
+#endif
+            Canvas.CanvasMouseMove += DebugView.DebugMouseMove;
+
+        }
+
+        public void SetTitle(bool fModify)
+        {
+            _modified = fModify;
+            string mark = (fModify) ? "*" : "";
+            string filename = (_filepath == "") ? "New file" : System.IO.Path.GetFileName(_filepath);
+            string projectName = "No Project";
+            string text = string.Format("Shoshado: {0} / {1} - {2}", projectName, filename, mark);
+            this.Text = text;
 
         }
         /// <summary>
@@ -39,7 +61,7 @@ namespace Shoshado
         {
             Canvas = new GUICanvas();
             Canvas.Visible = false;
-            //Canvas.EventUndoStateChange += SetTitle;
+            Canvas.EventUndoStateChange += SetTitle;
             CanvasPanel.AutoScroll = true;
             CanvasPanel.BorderStyle = BorderStyle.Fixed3D;
             CanvasPanel.SetBounds(0, menuStrip1.Height, ClientSize.Width, ClientSize.Height - menuStrip1.Height /*- statusStrip1.Height*/);
@@ -62,6 +84,12 @@ namespace Shoshado
         private void 新規作成ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Canvas.Visible = true;
+        }
+
+        private void debugViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DebugView.Activate();
+            DebugView.Show();
         }
     }
 }

@@ -8,5 +8,6 @@ namespace Shoshado.Canvas
 {
     partial class GUICanvas
     {
+        public Action<bool /*isDirtyFile*/> EventUndoStateChange = null;
     }
 }

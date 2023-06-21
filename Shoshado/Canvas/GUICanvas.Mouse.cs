@@ -9,6 +9,7 @@ namespace Shoshado.Canvas
 {
     partial class GUICanvas
     {
+        public Action<int, int> CanvasMouseMove = null;
 
         private void GUICanvas_MouseDown(object sender, MouseEventArgs e)
         {
@@ -17,6 +18,7 @@ namespace Shoshado.Canvas
 
         private void GUICanvas_MouseMove(object sender, MouseEventArgs e)
         {
+            CanvasMouseMove?.Invoke(e.X, e.Y);
 
         }
 

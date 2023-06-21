@@ -31,13 +31,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新規作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ウィンドウToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ファイルToolStripMenuItem});
+            this.ファイルToolStripMenuItem,
+            this.ウィンドウToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -56,9 +59,24 @@
             // 
             this.新規作成ToolStripMenuItem.Name = "新規作成ToolStripMenuItem";
             this.新規作成ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.新規作成ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.新規作成ToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.新規作成ToolStripMenuItem.Text = "新規作成";
             this.新規作成ToolStripMenuItem.Click += new System.EventHandler(this.新規作成ToolStripMenuItem_Click);
+            // 
+            // ウィンドウToolStripMenuItem
+            // 
+            this.ウィンドウToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.debugViewToolStripMenuItem});
+            this.ウィンドウToolStripMenuItem.Name = "ウィンドウToolStripMenuItem";
+            this.ウィンドウToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.ウィンドウToolStripMenuItem.Text = "ウィンドウ";
+            // 
+            // debugViewToolStripMenuItem
+            // 
+            this.debugViewToolStripMenuItem.Name = "debugViewToolStripMenuItem";
+            this.debugViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.debugViewToolStripMenuItem.Text = "DebugView";
+            this.debugViewToolStripMenuItem.Click += new System.EventHandler(this.debugViewToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -82,6 +100,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ファイルToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新規作成ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ウィンドウToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem debugViewToolStripMenuItem;
     }
 }
 
