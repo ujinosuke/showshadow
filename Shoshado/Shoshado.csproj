@@ -46,6 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Canvas\GUICanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.Designer.cs">
+      <DependentUpon>GUICanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.FileIO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.Keyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.Mouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.OLE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.RightContext.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.Select.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\GUICanvas.UndoRedo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas\ScrollPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DebugView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugView.Designer.cs">
+      <DependentUpon>DebugView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +90,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Canvas\GUICanvas.resx">
+      <DependentUpon>GUICanvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugView.resx">
+      <DependentUpon>DebugView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +121,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
