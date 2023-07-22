@@ -96,5 +96,10 @@ namespace Shoshado
             DebugView.Activate();
             DebugView.Show();
         }
+
+        private void 四角ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

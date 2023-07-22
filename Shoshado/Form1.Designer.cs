@@ -33,6 +33,8 @@
             this.新規作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ウィンドウToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.パーツToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.四角ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +42,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイルToolStripMenuItem,
+            this.パーツToolStripMenuItem,
             this.ウィンドウToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,9 +77,24 @@
             // debugViewToolStripMenuItem
             // 
             this.debugViewToolStripMenuItem.Name = "debugViewToolStripMenuItem";
-            this.debugViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.debugViewToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.debugViewToolStripMenuItem.Text = "DebugView";
             this.debugViewToolStripMenuItem.Click += new System.EventHandler(this.debugViewToolStripMenuItem_Click);
+            // 
+            // パーツToolStripMenuItem
+            // 
+            this.パーツToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.四角ToolStripMenuItem});
+            this.パーツToolStripMenuItem.Name = "パーツToolStripMenuItem";
+            this.パーツToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.パーツToolStripMenuItem.Text = "パーツ";
+            // 
+            // 四角ToolStripMenuItem
+            // 
+            this.四角ToolStripMenuItem.Name = "四角ToolStripMenuItem";
+            this.四角ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.四角ToolStripMenuItem.Text = "四角";
+            this.四角ToolStripMenuItem.Click += new System.EventHandler(this.四角ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -102,6 +120,8 @@
         private System.Windows.Forms.ToolStripMenuItem 新規作成ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ウィンドウToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem debugViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem パーツToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 四角ToolStripMenuItem;
     }
 }
 
