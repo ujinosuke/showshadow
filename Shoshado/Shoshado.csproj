@@ -90,7 +90,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Parts\PartsBase.cs" />
-    <Compile Include="Parts\Rectangle.cs" />
+    <Compile Include="Parts\PartsRectangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Canvas\GUICanvas.resx">

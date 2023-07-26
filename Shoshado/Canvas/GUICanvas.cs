@@ -15,6 +15,8 @@ namespace Shoshado.Canvas
     {
         private HatchStyle gridHs;
         private HatchBrush gridBrush;
+        private List<Parts.PartsBase> parts = new List<Parts.PartsBase>();
+        private Parts.PartsBase hoverParts = null;
 
         public GUICanvas()
         {
@@ -22,6 +24,8 @@ namespace Shoshado.Canvas
             MouseWheel += GUICanvas_MouseWheel;
             gridHs = HatchStyle.DottedGrid;
             gridBrush = new HatchBrush(gridHs, Color.LightGray, Color.White);
+
+            parts.Add(new Parts.PartsRectangle("Test Rectangle"));
         }
 
 
@@ -36,6 +40,24 @@ namespace Shoshado.Canvas
             var update_rect = e.ClipRectangle;
 
             e.Graphics.FillRectangle(gridBrush, update_rect);
+
+            foreach(var part in parts)
+            {
+                if (part == hoverParts) continue;
+                if( part.InRange(update_rect))
+                {
+                    part.OnPaint( Parts.PartsBase.Style.Nomal, sender, e);
+                }
+            }
+
+            if(hoverParts != null)
+            {
+                if(hoverParts.InRange(update_rect))
+                {
+                    hoverParts.OnPaint(Parts.PartsBase.Style.Hover, sender, e);
+                }
+            }
+
 
         }
     }
