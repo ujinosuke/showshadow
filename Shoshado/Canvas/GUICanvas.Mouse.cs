@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shoshado.Parts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,26 @@ namespace Shoshado.Canvas
 
         private void GUICanvas_MouseMove(object sender, MouseEventArgs e)
         {
+            var loc = e.Location;
+            PartsBase hover = null;
+
             CanvasMouseMove?.Invoke(e);
+
+            //Check Hover
+            foreach(var p in parts)
+            {
+                if (p.InRange(loc))
+                {
+                    hover = p;
+                    break;
+                }
+            }
+
+            if (hover != hoverParts)
+            {
+                hoverParts = hover;
+                Invalidate();
+            }
 
         }
 

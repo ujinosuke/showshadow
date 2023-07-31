@@ -27,6 +27,11 @@ namespace Shoshado.Parts
             e.Graphics.DrawRectangle(pen, X,Y,Width,Height);
         }
 
+        public override bool InRange(Point point)
+        {
+            return X <= point.X && Y <= point.Y && X + Width >= point.X && Y + Height >= point.Y;
+        }
+
         public override bool InRange(Rectangle rect)
         {
             return rect.IntersectsWith(new Rectangle(X, Y, Width, Height));

@@ -31,9 +31,14 @@ namespace Shoshado.Parts
 
         }
 
+        public virtual bool InRange(Point point)
+        {
+            return false;
+        }
+
         public virtual bool InRange(Rectangle rect )
         {
-            return true;
+            return false;
         }
     }
 }
