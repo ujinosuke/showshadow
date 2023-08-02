@@ -39,7 +39,7 @@ namespace Shoshado
                 t.Text = "";
             }
 
-
+            
         }
 
         public void DebugMouseMove(MouseEventArgs e)
@@ -78,6 +78,11 @@ namespace Shoshado
             txtKeyDown.Text = e.KeyCode.ToString();
 
 
+        }
+
+        public void DebugPropertyGrid(Object obj)
+        {
+            propertyGrid1.SelectedObject = obj;
         }
 
     }

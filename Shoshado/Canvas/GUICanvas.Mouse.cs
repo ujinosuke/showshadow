@@ -41,6 +41,11 @@ namespace Shoshado.Canvas
 
             if (hover != hoverParts)
             {
+                if(hover != null)
+                {
+                    GUICanvas_DebugPropertyGrid(hover);
+                }
+                
                 hoverParts = hover;
                 Invalidate();
             }

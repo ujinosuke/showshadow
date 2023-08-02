@@ -46,7 +46,7 @@ namespace Shoshado
             Canvas.CanvasMouseDoubleClick += DebugView.DebugMouseDoubleClick;
             Canvas.CanvasMouseWheel += DebugView.DebugMouseWheel;
             Canvas.CanvasPreviewKeyDown += DebugView.DebugKeyDown;
-
+            Canvas.DebugPropertyGrid += DebugView.DebugPropertyGrid;
         }
 
         public void SetTitle(bool fModify)

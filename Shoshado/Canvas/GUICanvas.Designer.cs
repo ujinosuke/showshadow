@@ -34,6 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.DoubleBuffered = true;
             this.Name = "GUICanvas";
             this.Size = new System.Drawing.Size(518, 348);
             this.Load += new System.EventHandler(this.GUICanvas_Load);

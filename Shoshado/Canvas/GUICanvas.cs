@@ -17,6 +17,7 @@ namespace Shoshado.Canvas
         private HatchBrush gridBrush;
         private List<Parts.PartsBase> parts = new List<Parts.PartsBase>();
         private Parts.PartsBase hoverParts = null;
+        public Action<object> DebugPropertyGrid = null;
 
         public GUICanvas()
         {
@@ -59,6 +60,11 @@ namespace Shoshado.Canvas
             }
 
 
+        }
+
+        private void GUICanvas_DebugPropertyGrid(object obj)
+        {
+            DebugPropertyGrid?.Invoke(obj);
         }
     }
 }
