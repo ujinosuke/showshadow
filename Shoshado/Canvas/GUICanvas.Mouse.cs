@@ -18,7 +18,27 @@ namespace Shoshado.Canvas
 
         private void GUICanvas_MouseDown(object sender, MouseEventArgs e)
         {
+            var loc = e.Location;
             CanvasMouseClick?.Invoke(e);
+            PartsBase selected = null;
+
+            foreach(var p in parts)
+            {
+                if( p.InRange(loc))
+                            {
+                    selected = p;
+                    break;
+
+                }
+            }
+            if( selected != selectedOne)
+            {
+                GUICanvas_DebugPropertySelectOne(selected);
+                selectedOne = selected;
+                Invalidate();
+
+
+            }
 
         }
 
@@ -41,11 +61,7 @@ namespace Shoshado.Canvas
 
             if (hover != hoverParts)
             {
-                if(hover != null)
-                {
-                    GUICanvas_DebugPropertyGrid(hover);
-                }
-                
+                GUICanvas_DebugPropertyHover(hover);
                 hoverParts = hover;
                 Invalidate();
             }

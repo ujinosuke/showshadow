@@ -40,16 +40,22 @@
             this.txtMouseWheel = new System.Windows.Forms.TextBox();
             this.txtKeyDown = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.propertyHover = new System.Windows.Forms.PropertyGrid();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.propertySelectOne = new System.Windows.Forms.PropertyGrid();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +72,7 @@
             this.txtMouse.Enabled = false;
             this.txtMouse.Location = new System.Drawing.Point(129, 69);
             this.txtMouse.Name = "txtMouse";
-            this.txtMouse.Size = new System.Drawing.Size(226, 19);
+            this.txtMouse.Size = new System.Drawing.Size(201, 19);
             this.txtMouse.TabIndex = 1;
             // 
             // label2
@@ -83,7 +89,7 @@
             this.txtMouseClick.Enabled = false;
             this.txtMouseClick.Location = new System.Drawing.Point(129, 101);
             this.txtMouseClick.Name = "txtMouseClick";
-            this.txtMouseClick.Size = new System.Drawing.Size(226, 19);
+            this.txtMouseClick.Size = new System.Drawing.Size(201, 19);
             this.txtMouseClick.TabIndex = 3;
             // 
             // label3
@@ -100,7 +106,7 @@
             this.txtMouseDoubleClick.Enabled = false;
             this.txtMouseDoubleClick.Location = new System.Drawing.Point(129, 136);
             this.txtMouseDoubleClick.Name = "txtMouseDoubleClick";
-            this.txtMouseDoubleClick.Size = new System.Drawing.Size(226, 19);
+            this.txtMouseDoubleClick.Size = new System.Drawing.Size(201, 19);
             this.txtMouseDoubleClick.TabIndex = 5;
             // 
             // btnClear
@@ -127,7 +133,7 @@
             this.txtMouseWheel.Enabled = false;
             this.txtMouseWheel.Location = new System.Drawing.Point(129, 171);
             this.txtMouseWheel.Name = "txtMouseWheel";
-            this.txtMouseWheel.Size = new System.Drawing.Size(226, 19);
+            this.txtMouseWheel.Size = new System.Drawing.Size(201, 19);
             this.txtMouseWheel.TabIndex = 8;
             // 
             // txtKeyDown
@@ -135,7 +141,7 @@
             this.txtKeyDown.Enabled = false;
             this.txtKeyDown.Location = new System.Drawing.Point(129, 212);
             this.txtKeyDown.Name = "txtKeyDown";
-            this.txtKeyDown.Size = new System.Drawing.Size(226, 19);
+            this.txtKeyDown.Size = new System.Drawing.Size(201, 19);
             this.txtKeyDown.TabIndex = 9;
             // 
             // label5
@@ -147,13 +153,13 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Key Down";
             // 
-            // propertyGrid1
+            // propertyHover
             // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(403, 378);
-            this.propertyGrid1.TabIndex = 11;
+            this.propertyHover.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyHover.Location = new System.Drawing.Point(0, 0);
+            this.propertyHover.Name = "propertyHover";
+            this.propertyHover.Size = new System.Drawing.Size(359, 378);
+            this.propertyHover.TabIndex = 11;
             // 
             // errorProvider1
             // 
@@ -167,13 +173,13 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.propertyGrid1);
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(792, 378);
-            this.splitContainer1.SplitterDistance = 403;
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 378);
+            this.splitContainer1.SplitterDistance = 702;
             this.splitContainer1.TabIndex = 12;
             // 
             // groupBox1
@@ -192,16 +198,41 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 378);
+            this.groupBox1.Size = new System.Drawing.Size(361, 378);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operation";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.propertySelectOne);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.propertyHover);
+            this.splitContainer2.Size = new System.Drawing.Size(702, 378);
+            this.splitContainer2.SplitterDistance = 339;
+            this.splitContainer2.TabIndex = 12;
+            // 
+            // propertySelectOne
+            // 
+            this.propertySelectOne.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertySelectOne.Location = new System.Drawing.Point(0, 0);
+            this.propertySelectOne.Name = "propertySelectOne";
+            this.propertySelectOne.Size = new System.Drawing.Size(339, 378);
+            this.propertySelectOne.TabIndex = 13;
             // 
             // DebugView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 378);
+            this.ClientSize = new System.Drawing.Size(1067, 378);
             this.Controls.Add(this.splitContainer1);
             this.Name = "DebugView";
             this.Text = "DebugView";
@@ -214,6 +245,10 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -231,9 +266,11 @@
         private System.Windows.Forms.TextBox txtMouseWheel;
         private System.Windows.Forms.TextBox txtKeyDown;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.PropertyGrid propertyHover;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.PropertyGrid propertySelectOne;
     }
 }

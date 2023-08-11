@@ -17,7 +17,9 @@ namespace Shoshado.Canvas
         private HatchBrush gridBrush;
         private List<Parts.PartsBase> parts = new List<Parts.PartsBase>();
         private Parts.PartsBase hoverParts = null;
-        public Action<object> DebugPropertyGrid = null;
+        private Parts.PartsBase selectedOne = null;
+        public Action<object> DebugPropetySelecteOne = null;
+        public Action<object> DebugPropertyHover = null;
 
         public GUICanvas()
         {
@@ -26,7 +28,14 @@ namespace Shoshado.Canvas
             gridHs = HatchStyle.DottedGrid;
             gridBrush = new HatchBrush(gridHs, Color.LightGray, Color.White);
 
-            parts.Add(new Parts.PartsRectangle("Test Rectangle"));
+            var p0 = new Parts.PartsRectangle("Rect0");
+            var p1 = new Parts.PartsRectangle("Rect1");
+            p1.X = 100;
+            p1.Y = 100;
+
+            parts.Add(p0);
+            parts.Add(p1);
+            
         }
 
 
@@ -51,7 +60,15 @@ namespace Shoshado.Canvas
                 }
             }
 
-            if(hoverParts != null)
+            if(selectedOne != null)
+            {
+                if( selectedOne.InRange(update_rect))
+                {
+                    selectedOne.OnPaint(Parts.PartsBase.Style.Select, sender, e);
+                }
+            }
+
+            if(hoverParts != null && selectedOne != hoverParts)
             {
                 if(hoverParts.InRange(update_rect))
                 {
@@ -62,9 +79,14 @@ namespace Shoshado.Canvas
 
         }
 
-        private void GUICanvas_DebugPropertyGrid(object obj)
+        private void GUICanvas_DebugPropertyHover(object obj)
         {
-            DebugPropertyGrid?.Invoke(obj);
+            DebugPropertyHover?.Invoke(obj);
+        }
+
+        private void GUICanvas_DebugPropertySelectOne(object obj)
+        {
+            DebugPropetySelecteOne?.Invoke(obj);
         }
     }
 }

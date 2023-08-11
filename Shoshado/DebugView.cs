@@ -80,9 +80,14 @@ namespace Shoshado
 
         }
 
-        public void DebugPropertyGrid(Object obj)
+        public void DebugPropertyHover(Object obj)
         {
-            propertyGrid1.SelectedObject = obj;
+            propertyHover.SelectedObject = obj;
+        }
+
+        public void DebugPropertySelectOne(object obj)
+        {
+            propertySelectOne.SelectedObject = obj;
         }
 
     }
