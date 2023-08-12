@@ -43,19 +43,21 @@
             this.propertyHover = new System.Windows.Forms.PropertyGrid();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.propertySelectOne = new System.Windows.Forms.PropertyGrid();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMouseDrag = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -139,7 +141,7 @@
             // txtKeyDown
             // 
             this.txtKeyDown.Enabled = false;
-            this.txtKeyDown.Location = new System.Drawing.Point(129, 212);
+            this.txtKeyDown.Location = new System.Drawing.Point(129, 237);
             this.txtKeyDown.Name = "txtKeyDown";
             this.txtKeyDown.Size = new System.Drawing.Size(201, 19);
             this.txtKeyDown.TabIndex = 9;
@@ -147,7 +149,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 219);
+            this.label5.Location = new System.Drawing.Point(4, 240);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 12);
             this.label5.TabIndex = 10;
@@ -182,27 +184,6 @@
             this.splitContainer1.SplitterDistance = 702;
             this.splitContainer1.TabIndex = 12;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnClear);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtKeyDown);
-            this.groupBox1.Controls.Add(this.txtMouse);
-            this.groupBox1.Controls.Add(this.txtMouseWheel);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtMouseClick);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtMouseDoubleClick);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 378);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Operation";
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -228,6 +209,46 @@
             this.propertySelectOne.Size = new System.Drawing.Size(339, 378);
             this.propertySelectOne.TabIndex = 13;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtMouseDrag);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtKeyDown);
+            this.groupBox1.Controls.Add(this.txtMouse);
+            this.groupBox1.Controls.Add(this.txtMouseWheel);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtMouseClick);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtMouseDoubleClick);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(361, 378);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Operation";
+            // 
+            // txtMouseDrag
+            // 
+            this.txtMouseDrag.Enabled = false;
+            this.txtMouseDrag.Location = new System.Drawing.Point(129, 202);
+            this.txtMouseDrag.Name = "txtMouseDrag";
+            this.txtMouseDrag.Size = new System.Drawing.Size(201, 19);
+            this.txtMouseDrag.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Mouse Drag";
+            // 
             // DebugView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -243,12 +264,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,5 +293,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.PropertyGrid propertySelectOne;
+        private System.Windows.Forms.TextBox txtMouseDrag;
+        private System.Windows.Forms.Label label6;
     }
 }

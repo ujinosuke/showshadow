@@ -24,6 +24,8 @@ namespace Shoshado.Canvas
         public GUICanvas()
         {
             InitializeComponent();
+            GUICanvas_MouseActivate();
+
             MouseWheel += GUICanvas_MouseWheel;
             gridHs = HatchStyle.DottedGrid;
             gridBrush = new HatchBrush(gridHs, Color.LightGray, Color.White);

@@ -45,6 +45,7 @@ namespace Shoshado
             Canvas.CanvasMouseClickUp += DebugView.DebugMouseClickUp;
             Canvas.CanvasMouseDoubleClick += DebugView.DebugMouseDoubleClick;
             Canvas.CanvasMouseWheel += DebugView.DebugMouseWheel;
+            Canvas.CanvasMouseDrag += DebugView.DebugMouseDrag;
             Canvas.CanvasPreviewKeyDown += DebugView.DebugKeyDown;
             Canvas.DebugPropertyHover += DebugView.DebugPropertyHover;
             Canvas.DebugPropetySelecteOne += DebugView.DebugPropertySelectOne;

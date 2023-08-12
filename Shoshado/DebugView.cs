@@ -76,7 +76,12 @@ namespace Shoshado
         {
             //string txt = string.Format("Control {0} / Shift {1} /Alt: {2} ", e.Control, e.Shift, e.Alt);
             txtKeyDown.Text = e.KeyCode.ToString();
+        }
 
+        public void DebugMouseDrag(Point p, MouseEventArgs e)
+        {
+            string txt = string.Format("Drag : {2} (x,y) = ({0},{1})", e.X, e.Y, e.Button.ToString());
+            txtMouseDrag.Text = txt;
 
         }
 
