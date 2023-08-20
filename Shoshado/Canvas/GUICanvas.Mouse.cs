@@ -26,14 +26,15 @@ namespace Shoshado.Canvas
             public Action<MouseEventArgs> Moving = null;
             public Action<Point,MouseEventArgs> Dragging = null;
 
-
-            Point clickPoint = new Point();
+            public Point ClickPoint = new Point();
+            public Point DragPrevPoint = new Point();
 
             public void Down(MouseEventArgs e)
             {
                 if( e.Button == MouseButtons.Left)
                 {
-                    clickPoint = e.Location;
+                    ClickPoint = e.Location;
+                    DragPrevPoint = ClickPoint;
                     LeftClick?.Invoke(e);
                 }
                 else if ( e.Button == MouseButtons.Right)
@@ -51,9 +52,10 @@ namespace Shoshado.Canvas
             {
                 if(e.Button == MouseButtons.Left)
                 {
-                    if (clickPoint != e.Location)
+                    if (ClickPoint != e.Location)
                     {
-                        Dragging?.Invoke(clickPoint, e);
+                        Dragging?.Invoke(DragPrevPoint, e);
+                        DragPrevPoint = e.Location;
                     }
                 }
                 else if ( e.Button == MouseButtons.None)
@@ -124,6 +126,18 @@ namespace Shoshado.Canvas
             mouseContext.Dragging += (p, e) =>
             {
                 CanvasMouseDrag?.Invoke(p, e);
+                var loc = e.Location;
+
+                if(selectedOne != null)
+                {
+                    var delta_x = loc.X - p.X;
+                    var delta_y = loc.Y - p.Y;
+
+                    selectedOne.X += delta_x;
+                    selectedOne.Y += delta_y;
+                    Invalidate();
+                }
+
             };
 
 
